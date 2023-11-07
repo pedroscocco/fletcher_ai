@@ -1,0 +1,15 @@
+2023/11/06-23:44:47.704 b1c3 Reusing MANIFEST /home/pedroscocco/Code/botsel/selenium/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/11/06-23:44:47.705 b1c3 Recovering log #52
+2023/11/06-23:44:47.833 b1c3 Reusing old log /home/pedroscocco/Code/botsel/selenium/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000052.log 
+2023/11/06-23:44:47.833 b1c3 Delete type=2 #51
+2023/11/06-23:44:51.562 b1c3 Level-0 table #57: started
+2023/11/06-23:44:51.658 b1c3 Level-0 table #57: 408083 bytes OK
+2023/11/06-23:44:51.674 b1c3 Delete type=0 #52
+2023/11/06-23:44:51.677 b1c3 Manual compaction at level-0 from '\x00\x1b\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1c\x00\x00\x00' @ 0 : 0; will stop at '\x00\x1c\x00\x00\x05' @ 96959 : 1
+2023/11/06-23:44:51.677 b1c3 Compacting 1@0 + 1@1 files
+2023/11/06-23:44:52.089 b1c3 Generated table #58@0: 47676 keys, 929427 bytes
+2023/11/06-23:44:52.090 b1c3 Compacted 1@0 + 1@1 files => 929427 bytes
+2023/11/06-23:44:52.097 b1c3 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/11/06-23:44:52.100 b1c3 Delete type=2 #57
+2023/11/06-23:44:52.102 b1c3 Manual compaction at level-0 from '\x00\x1c\x00\x00\x05' @ 96959 : 1 .. '\x00\x1c\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/11/06-23:44:52.148 b1c3 Manual compaction at level-0 from '\x00\x1c\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1d\x00\x00\x00' @ 0 : 0; will stop at (end)
