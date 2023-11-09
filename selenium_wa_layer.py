@@ -44,6 +44,30 @@ def start_selenium():
     time.sleep(2)
 
 
+# Find group participants
+def find_group_participants():
+    # Click the group info button
+    group_info_button_locator = (By.XPATH, '//div[@title="Profile Details" and @role="button"]')
+    group_info_button = WebDriverWait(driver, TIMEOUT).until(EC.presence_of_element_located(group_info_button_locator))
+    group_info_button.click()
+
+    # Get the group participants
+    participants_locator = (By.XPATH, '//div[@role="list"]//div[@role="listitem"]//div[@role="gridcell"]')
+    participants_elements = driver.find_elements(*participants_locator)
+    participant_strings = [participant.text for participant in participants_elements]
+    split_strings = map(lambda x: x.split('\n'), participant_strings)
+    flatten_strings = [item for sublist in split_strings for item in sublist]
+    participants = filter(lambda x:  x != 'You' and x != 'Group Admin' and x != '', flatten_strings)
+
+
+    # Close the group info window
+    close_group_info_button_locator = (By.XPATH, '//div[@aria-label="Close"]//span[@data-icon="x"]')
+    close_group_info_button = WebDriverWait(driver, TIMEOUT).until(EC.presence_of_element_located(close_group_info_button_locator))
+    close_group_info_button.click()
+
+    return list(participants)
+
+
 # Wait for a new message in group
 def wait_new_message_element():
     rows_locator = (By.XPATH, './/span[contains(@class, "selectable-text")]//ancestor::div[@role="row"]')
